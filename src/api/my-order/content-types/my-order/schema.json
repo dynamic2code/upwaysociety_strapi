@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_orders",
+  "info": {
+    "singularName": "my-order",
+    "pluralName": "my-orders",
+    "displayName": "myOrder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "my_orders"
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product",
+    "displayName": "products",
     "description": ""
   },
   "options": {
@@ -15,21 +15,13 @@
     "name": {
       "type": "string"
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "description": {
+      "type": "text"
     },
-    "count": {
+    "prize": {
       "type": "integer"
     },
-    "cost": {
+    "count": {
       "type": "integer"
     },
     "category": {
@@ -37,8 +29,28 @@
       "enum": [
         "Male",
         "Female",
-        "Children"
+        "Children "
       ]
+    },
+    "preview_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
