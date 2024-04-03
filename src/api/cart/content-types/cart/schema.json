@@ -4,18 +4,28 @@
   "info": {
     "singularName": "cart",
     "pluralName": "carts",
-    "displayName": "cart"
+    "displayName": "cart",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "customer": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "quantity": {
+      "type": "integer",
+      "unique": false,
+      "required": true
+    },
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::customer.customer",
-      "inversedBy": "cart"
+      "target": "plugin::users-permissions.user"
     }
   }
 }
